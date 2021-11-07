@@ -4,7 +4,7 @@
 }
 
 body {
-    background: #EEF9BF;
+    background: #eef9bf;
     padding-top: 40px;
     display: flex;
     flex-direction: column;
@@ -16,7 +16,7 @@ header {
     font-size: 56px;
     line-height: 66px;
     letter-spacing: -0.004em;
-    color: #75B79E;
+    color: #75b79e;
     margin-bottom: 47px;
 }
 
@@ -27,15 +27,32 @@ main {
     margin-left: 34px;
 }
 
-.carta {
+.card {
     width: 117px;
     height: 146px;
-    background: #A7E9AF;
     position: relative;
     margin: 0 34px 34px 0;
+    transform-style: preserve-3d;
+    transition: all 0.5s;
 }
 
-.carta img {
+.face {
+    width: 100%;
+    height: 100%;
+    background-color: #a7e9af;
+    border-radius: 10px;
+    position: absolute;
+}
+
+.front-face {
+    transform: rotateY(180deg);
+}
+
+.flip {
+    transform: rotateY(180deg);
+}
+
+.card img {
     position: absolute;
     width: 100px;
     height: 100px;
@@ -52,7 +69,7 @@ main {
         flex-direction: column;
         margin-left: 0;
     }
-    .carta {
+    .card {
         margin: 0;
         margin-bottom: 34px;
     }

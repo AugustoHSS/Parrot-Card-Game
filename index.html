@@ -2,58 +2,29 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Parrot Card Game</title>
 </head>
 
 <body>
     <header>PARROT CARD GAME</header>
 
     <main>
-        <div class="carta">
-            <img src="Imagens/front.png">
+        <div class="card" data-identifier="card" onclick="virarCarta(this)">
+            <div class="face back-face" data-identifier="back-face">
+                <img src="Imagens/front.png" />
+            </div>
+            <div class="face front-face" data-identifier="front-face">
+                <img src="imagens/bobrossparrot.gif">
+            </div>
         </div>
-        <div class="carta">
-            <img src="Imagens/front.png">
-        </div>
-        <div class="carta">
-            <img src="Imagens/front.png">
-        </div>
-        <div class="carta">
-            <img src="Imagens/front.png">
-        </div>
-        <div class="carta">
-            <img src="Imagens/front.png">
-        </div>
-        <div class="carta">
-            <img src="Imagens/front.png">
-        </div>
-        <div class="carta">
-            <img src="Imagens/front.png">
-        </div>
-        <div class="carta">
-            <img src="Imagens/front.png">
-        </div>
-        <div class="carta">
-            <img src="Imagens/front.png">
-        </div>
-        <div class="carta">
-            <img src="Imagens/front.png">
-        </div>
-        <div class="carta">
-            <img src="Imagens/front.png">
-        </div>
-        <div class="carta">
-            <img src="Imagens/front.png">
-        </div>
-
     </main>
     <script src="script.js"></script>
 </body>
