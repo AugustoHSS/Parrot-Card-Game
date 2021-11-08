@@ -5,6 +5,8 @@ let jogadas = 0;
 let primeiraCarta;
 let segundaCarta;
 let acertos = 0;
+let idRelogio = setInterval(relogio, 1000);
+let contadorRelogio = 0;
 const baralho = [
     `
     <div class="card 1" data-identifier="card" onclick="virarCarta(this)">
@@ -192,9 +194,6 @@ function testarCartas() {
     if (cartasViradas === 2 && primeiraCarta.className === segundaCarta.className) {
         cartasViradas = 0;
         acertos++;
-        if (acertos === dificuldade / 2) {
-            alert("Você ganhou em " + jogadas + " jogadas!");
-        }
     } else {
         addNaoClica();
         setTimeout(errou, 1000);
@@ -239,5 +238,27 @@ function removeNaoClica() {
 
     for (let i = 0; i < todasCartas.length; i++) {
         todasCartas[i].classList.remove("nao-clica");
+    }
+}
+
+
+
+function relogio() {
+    contadorRelogio++;
+    document.querySelector(".relogio").innerHTML = contadorRelogio;
+    if (acertos === dificuldade / 2) {
+
+        clearInterval(idRelogio);
+        alert("Você ganhou em " + contadorRelogio + " segundos com " + jogadas + " jogadas! ");
+
+        setTimeout(novoJogo, 1000);
+
+    }
+}
+
+function novoJogo() {
+    const jogarNovamente = prompt("Voce deseja jogar novamente?(sim/nao)");
+    if (jogarNovamente === 'sim') {
+        location.reload(true);
     }
 }

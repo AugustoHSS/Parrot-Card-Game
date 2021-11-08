@@ -1,85 +1,100 @@
-* {
-    box-sizing: border-box;
-    font-family: Roboto;
-}
-
-body {
-    background: #eef9bf;
-    padding-top: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-header {
-    font-weight: bold;
-    font-size: 56px;
-    line-height: 66px;
-    letter-spacing: -0.004em;
-    color: #75b79e;
-    margin-bottom: 47px;
-}
-
-main {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 1057px;
-    margin-left: 34px;
-}
-
-.card {
-    width: 117px;
-    height: 146px;
-    position: relative;
-    margin: 0 34px 34px 0;
-    transform-style: preserve-3d;
-    transition: all 0.5s;
-}
-
-.face {
-    border: 1px solid #99CEA8;
-    width: 100%;
-    height: 100%;
-    background-color: #a7e9af;
-    border-radius: 10px;
-    position: absolute;
-}
-
-.front-face {
-    transform: rotateY(180deg);
-}
-
-.flip {
-    transform: rotateY(180deg);
-}
-
-.card img {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    margin: 23px 0 0 10px;
-}
-
-.nao-clica {
-    pointer-events: none;
-}
-
-.virada {
-    pointer-events: none;
-}
-
-@media (max-width: 600px) {
-    header {
-        font-size: 36px;
-        line-height: 42px;
-        text-align: center;
+    * {
+        box-sizing: border-box;
+        font-family: Roboto;
     }
-    main {
+    
+    body {
+        background: #eef9bf;
+        padding-top: 40px;
+        display: flex;
         flex-direction: column;
-        margin-left: 0;
+        align-items: center;
     }
+    
+    header {
+        font-weight: bold;
+        font-size: 56px;
+        line-height: 66px;
+        letter-spacing: -0.004em;
+        color: #75b79e;
+        margin-bottom: 47px;
+    }
+    
+    main {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 1057px;
+        margin-left: 34px;
+    }
+    
     .card {
-        margin: 0;
-        margin-bottom: 34px;
+        width: 117px;
+        height: 146px;
+        position: relative;
+        margin: 0 34px 34px 0;
+        transform-style: preserve-3d;
+        transition: all 0.5s;
     }
-}
+    
+    .face {
+        border: 1px solid #99CEA8;
+        width: 100%;
+        height: 100%;
+        background-color: #a7e9af;
+        border-radius: 10px;
+        position: absolute;
+    }
+    
+    .front-face {
+        transform: rotateY(180deg);
+    }
+    
+    .flip {
+        transform: rotateY(180deg);
+    }
+    
+    .card img {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        margin: 23px 0 0 10px;
+    }
+    
+    .nao-clica {
+        pointer-events: none;
+    }
+    
+    .virada {
+        pointer-events: none;
+    }
+    
+    .relogio {
+        background-color: white;
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+        border-radius: 50%;
+        border: 1px solid black;
+        position: fixed;
+        right: 30px;
+        top: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    @media (max-width: 600px) {
+        header {
+            font-size: 36px;
+            line-height: 42px;
+            text-align: center;
+        }
+        main {
+            flex-direction: column;
+            margin-left: 0;
+        }
+        .card {
+            margin: 0;
+            margin-bottom: 34px;
+        }
+    }
