@@ -64,6 +64,10 @@ main {
     pointer-events: none;
 }
 
+.virada {
+    pointer-events: none;
+}
+
 @media (max-width: 600px) {
     header {
         font-size: 36px;

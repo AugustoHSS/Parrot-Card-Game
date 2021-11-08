@@ -171,6 +171,7 @@ function virarCarta(carta) {
 
     if (!carta.classList.contains('flip')) {
         carta.classList.add("flip");
+        carta.classList.add("virada");
         cartasViradas++;
     }
 
@@ -181,7 +182,7 @@ function virarCarta(carta) {
         primeiraCarta = carta;
     } else {
         segundaCarta = carta;
-        testarCartas();
+        setTimeout(testarCartas, 100);
 
     }
 
@@ -198,7 +199,10 @@ function testarCartas() {
         addNaoClica();
         setTimeout(errou, 1000);
         setTimeout(removeNaoClica, 1050);
+
+
     }
+
 
 }
 
@@ -217,6 +221,8 @@ function errou() {
     cartasViradas = 0;
     primeiraCarta.classList.remove("flip");
     segundaCarta.classList.remove("flip")
+    primeiraCarta.classList.remove("virada")
+    segundaCarta.classList.remove("virada")
 
 }
 
